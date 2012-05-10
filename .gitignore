@@ -1,6 +1,47 @@
-*.class
 
-# Package Files #
-*.jar
-*.war
-*.ear
+Ext.define('MyApp.view.Overview', {
+    extend: 'Ext.Container',
+
+    config: {
+        items: [
+            {
+                xtype: 'carousel'
+            },
+            {
+                xtype: 'titlebar',
+                docked: 'top',
+                title: 'Association KUL'
+            },
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'button',
+                        ui: 'back',
+                        text: 'Back'
+                    }
+                ]
+            },
+            {
+                xtype: 'button',
+                ui: 'action',
+                text: 'Borrowed'
+            },
+            {
+                xtype: 'button',
+                ui: 'action',
+                text: 'Renewal'
+            },
+            {
+                xtype: 'button',
+                ui: 'confirm',
+                text: 'Reservation'
+            },
+            {
+                xtype: 'navigationview'
+            }
+        ]
+    }
+
+});
